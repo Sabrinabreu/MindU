@@ -3,7 +3,7 @@ import React from "react";
 import CadastroForm from "../Components/CadastroFormEmpresa";
 import "../css/CadastroEmpresa.css"
 import Dengue from '../img/bannerEMP.webp'
-import {Container, Row, Col, Stack} from "react-bootstrap"
+import {Container, Row, Col, Dropdown, DropdownButton} from "react-bootstrap"
 
 
 const Cadastro = () => {
@@ -28,6 +28,37 @@ const Cadastro = () => {
         <h2>Opinião dos nossos parceiros</h2>
 
         <h2>Calcule os custos de saúde mental na sua empresa</h2>
+
+        <div className="fundoInfo">
+            <Row className="justify-content-center g-4 p-3">
+                <Col md={7} sm={12} className="textoInfo">
+                    <h1 className="mb-4 tituloInfo">Quantos colaboradores você possui?</h1>
+
+
+                    <input placeholder="Digite" type="text" name="text" class="input"/>
+
+                    <DropdownButton id="dropdown-basic-button" title="Dropdown button">
+                      <Dropdown.Item href="#/action-1">Entre 1 e 50</Dropdown.Item>
+                      <Dropdown.Item href="#/action-2">Entre 51 e 100</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Entre 101 e 500</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Entre 501 e 1000</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Entre 1001 e 5000</Dropdown.Item>
+                      <Dropdown.Item href="#/action-3">Mais de 5000</Dropdown.Item>
+                      
+                    </DropdownButton>
+
+
+
+                    <h1 className="mb-4 tituloInfo">Qual o salário médio mensal?</h1>
+                    <input placeholder="Digite" type="text" name="text" class="input"/>
+                    
+                    <h1 className="mb-4 tituloInfo">Qual a idade média dos colaboradores?</h1>
+                    
+                    <button className="botaoBanner">CALCULAR CUSTO</button>
+                </Col>
+            </Row>            
+      </div>
+
 
         <h2>Cadastrar sua empresa</h2>
 
