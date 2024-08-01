@@ -3,6 +3,7 @@ import React from "react";
 import CadastroForm from "../Components/CadastroFormEmpresa";
 import "../css/CadastroEmpresa.css"
 import bannerEMP from '../img/bannerEMP.webp'
+import BGCalc from '../img/BGCalc.jpg'
 import {Container, Row, Col, Dropdown, DropdownButton} from "react-bootstrap"
 
 
@@ -44,10 +45,11 @@ const Cadastro = () => {
             </Row>            
       </div>
 
-        <h2 className="centralizar">Calcule os custos de saúde mental na sua empresa</h2>
+        <h2 className="m-4 centralizar">Calcule os custos de saúde mental na sua empresa</h2>
 
-        <div className="fundoCalculo centralizar">
-                <Col md={5} sm={12} className="textoInfo">
+        <div className="m-3 fundoCalc centralizar">
+        {/* <img className="fundoCalc" src={BGCalc}/> */}
+                <Col md={5} sm={12} className="textoCalc">
                     <h1 className="mb-4 text-start">Quantos colaboradores você possui?</h1>
                     <input placeholder="Digite" type="text" name="text" class="input"/>
 
@@ -88,7 +90,7 @@ const Cadastro = () => {
       </div>
 
 
-        <h2 className="centralizar">Cadastrar sua empresa</h2>
+        <h2 className="m-4 centralizar">Cadastrar sua empresa</h2>
 
 
 

@@ -25,6 +25,20 @@ body {background-color: #fffcfb;}
     object-fit: cover;
 }
 
+.fundoCalc {
+  background-color: #73347f;
+  padding: 20px 0px;
+  overflow: hidden;
+}
+.textoCalc{
+    background-color: #e1a4ef;
+    padding: 1.6rem !important;
+    border-radius: 5px 50px;
+    color: #71357e;
+    font-size: 17px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
 .botaoBanner {
     padding: 1.3em 3em;
     font-size: 12px;
@@ -60,16 +74,13 @@ body {background-color: #fffcfb;}
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     box-shadow: 0px 0px 20px -18px;
   }
-  
   .input:hover {
     border: 2px solid lightgrey;
     box-shadow: 0px 0px 20px -17px;
   }
-  
   .input:active {
     transform: scale(0.95);
   }
-  
   .input:focus {
     border: 2px solid grey;
   }
