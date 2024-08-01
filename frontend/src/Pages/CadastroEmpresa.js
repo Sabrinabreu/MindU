@@ -7,6 +7,24 @@ import {Container, Row, Col, Dropdown, DropdownButton} from "react-bootstrap"
 
 
 const Cadastro = () => {
+
+// const dropDownButton = document.querySelector('#i-greitis-dropdown');
+// const buttons = document.querySelectorAll('.dropdown-button');
+
+// for (const button of buttons) {
+//   button.addEventListener('click', event => {
+//     dropDownButton.textContent = event.target.value;
+//   });
+// }
+
+
+// function getOption() {
+//   selectElement = 
+//         document.querySelector('#select1');
+//   output = selectElement.value;
+//   document.querySelector('.output').textContent = output;
+// }
+
   return (
     <>
       <div>
@@ -29,9 +47,9 @@ const Cadastro = () => {
 
         <h2>Calcule os custos de saúde mental na sua empresa</h2>
 
-        <div className="fundoInfo">
+        <div className="fundoCalculo">
             <Row className="justify-content-center g-4 p-3">
-                <Col md={7} sm={12} className="textoInfo">
+                <Col md={5} sm={12} className="textoInfo">
                     <h1 className="mb-4 tituloInfo">Quantos colaboradores você possui?</h1>
 
 
@@ -44,8 +62,17 @@ const Cadastro = () => {
                       <Dropdown.Item href="#/action-3">Entre 501 e 1000</Dropdown.Item>
                       <Dropdown.Item href="#/action-3">Entre 1001 e 5000</Dropdown.Item>
                       <Dropdown.Item href="#/action-3">Mais de 5000</Dropdown.Item>
-                      
                     </DropdownButton>
+
+
+                        {/* <select id="select1">
+                            <option value="free">Free</option>
+                            <option value="basic">Basic</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    
+                          <p>The value of the option selected is:<span class="output"></span></p>
+                            <button onclick="getOption()"> Check option </button> */}
 
 
 
@@ -54,6 +81,33 @@ const Cadastro = () => {
                     
                     <h1 className="mb-4 tituloInfo">Qual a idade média dos colaboradores?</h1>
                     
+                    <div>
+                    <label class="radio-button">
+                      <input type="radio" name="option" value="option1"/>
+                      <div class="circulo-radio"></div>
+                      <span class="radio-label">Entre 18 e 24 anos</span>
+                    </label>
+                    <label class="radio-button">
+                      <input type="radio" name="option" value="option2"/>
+                      <div class="circulo-radio"></div>
+                      <span class="radio-label">Entre 25 e 34</span>
+                    </label>
+                    <label class="radio-button">
+                      <input type="radio" name="option" value="option3"/>
+                      <div class="circulo-radio"></div>
+                      <span class="radio-label">Entre 34 e 50</span>
+                    </label>
+                    <label class="radio-button">
+                      <input type="radio" name="option" value="option3"/>
+                      <div class="circulo-radio"></div>
+                      <span class="radio-label">Mais de 50 anos</span>
+                    </label>
+                  </div>
+
+
+                      
+
+
                     <button className="botaoBanner">CALCULAR CUSTO</button>
                 </Col>
             </Row>            
