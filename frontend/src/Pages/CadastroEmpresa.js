@@ -1,4 +1,4 @@
-//Cadastro
+//CadastroEmpresa
 import React from "react";
 import CadastroForm from "../Components/CadastroForm";
 
