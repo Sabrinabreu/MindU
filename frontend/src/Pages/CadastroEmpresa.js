@@ -13,13 +13,14 @@ const Cadastro = () => {
 
       <div className="fundoInfo">
             <Row className="justify-content-center g-4 p-3">
-                <Col md={5} sm={12} className="textoInfo">
-                    <h1 className="mb-4 tituloInfo">O que é a dengue?</h1>
+                <Col md={7} sm={12} className="textoInfo">
+                    <h1 className="mb-4 tituloInfo">Cuidar da saúde da sua equipe te ajuda a economizar!</h1>
                     <p>A dengue é uma doença viral febril aguda, causada por um arbovírus e transmitida pelos mosquitos Aedes aegypti. Pode se tornar grave, dependendo do vírus envolvido, infecção anterior pelo vírus e doenças crônicas (diabetes, asma brônquica, anemia falciforme).<br/>
 
                     O doente pode apresentar sintomas como febre, dor de cabeça, dores pelo corpo, manchas vermelhas na pele, sangramentos, vômitos ou até mesmo não apresentar qualquer sintoma. É importante procurar orientação médica logo nos primeiros sintomas.</p>
+                    <button className="botaoBanner">INVESTIR NO BEM ESTAR</button>
                 </Col>
-                <Col className="centralizar" md={5} sm={12}>
+                <Col className="centralizar" md={4} sm={12}>
                     <img className="fotoInfo" src={Dengue}/> 
                 </Col>
             </Row>            
