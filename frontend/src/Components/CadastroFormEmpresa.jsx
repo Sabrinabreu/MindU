@@ -46,7 +46,8 @@ const CadastroForm = () => {
     }
   };
 
-  return (
+return (
+          
     <form onSubmit={handleSubmit}>
 
       <Container className="justify-content-center g-4 p-3" >
@@ -55,13 +56,13 @@ const CadastroForm = () => {
 
 
       <Row >
-        <Col><input className='inputgeral' type="text" name="telefone" placeholder="Telefone" value={formData.telefone} onChange={handleChange} /></Col>
+        <Col><input className='inputgeral' type="tel"  maxlength="15" name="telefone" placeholder="Telefone" value={formData.telefone} onChange={handleChange} /></Col>
         <Col><input className='inputgeral' type="text" name="empresa" placeholder="Empresa" value={formData.empresa} onChange={handleChange} /></Col>
       </Row>
       
       <Row >
         <Col><input className='inputgeral' type="text" name="departamento" placeholder="Departamento" value={formData.departamento} onChange={handleChange} /></Col>
-        <Col>      <input className='inputgeral' type="number" name="qtdfuncionarios" placeholder="Qtdfuncionarios" value={formData.qtdfuncionarios} onChange={handleChange} /></Col>
+        <Col><input className='inputgeral' type="number" name="qtdfuncionarios" placeholder="Qtdfuncionarios" value={formData.qtdfuncionarios} onChange={handleChange} /></Col>
       </Row>
 
 
