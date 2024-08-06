@@ -3,28 +3,10 @@ import React from "react";
 import CadastroForm from "../Components/CadastroFormEmpresa";
 import "../css/CadastroEmpresa.css"
 import bannerEMP from '../img/bannerEMP.webp'
-import BGCalc from '../img/BGCalc.jpg'
 import {Container, Row, Col, Dropdown, DropdownButton} from "react-bootstrap"
 
 
 const Cadastro = () => {
-
-// const dropDownButton = document.querySelector('#i-greitis-dropdown');
-// const buttons = document.querySelectorAll('.dropdown-button');
-
-// for (const button of buttons) {
-//   button.addEventListener('click', event => {
-//     dropDownButton.textContent = event.target.value;
-//   });
-// }
-
-
-// function getOption() {
-//   selectElement = 
-//         document.querySelector('#select1');
-//   output = selectElement.value;
-//   document.querySelector('.output').textContent = output;
-// }
 
   return (
     <>
@@ -37,7 +19,7 @@ const Cadastro = () => {
                     <p>A dengue é uma doença viral febril aguda, causada por um arbovírus e transmitida pelos mosquitos Aedes aegypti. Pode se tornar grave, dependendo do vírus envolvido, infecção anterior pelo vírus e doenças crônicas (diabetes, asma brônquica, anemia falciforme).<br/>
 
                     O doente pode apresentar sintomas como febre, dor de cabeça, dores pelo corpo, manchas vermelhas na pele, sangramentos, vômitos ou até mesmo não apresentar qualquer sintoma. É importante procurar orientação médica logo nos primeiros sintomas.</p>
-                    <button className="botaoBanner">INVESTIR NO BEM ESTAR</button>
+                    <a href="#header"><button className="botaoBanner">INVESTIR NO BEM ESTAR</button></a>
                 </Col>
                 <Col className="centralizar" md={4} sm={12}>
                     <img className="fotoInfo" src={bannerEMP}/> 
@@ -47,14 +29,13 @@ const Cadastro = () => {
 
         <h2 className="m-4 centralizar">Calcule os custos de saúde mental na sua empresa</h2>
 
-        <div className="m-3 fundoCalc centralizar">
-        {/* <img className="fundoCalc" src={BGCalc}/> */}
+        <div className="fundoCalc centralizar">
                 <Col md={5} sm={12} className="textoCalc">
                     <h1 className="mb-4 text-start">Quantos colaboradores você possui?</h1>
-                    <input placeholder="Digite" type="text" name="text" class="input"/>
+                    <input placeholder="Digite" type="text" name="text" className='inputgeral'/>
 
                     <h1 className="mb-4 text-start">Qual o salário médio mensal?</h1>
-                    <input placeholder="Digite" type="text" name="text" class="input"/>
+                    <input placeholder="Digite" type="text" name="text" className='inputgeral'/>
                     
                     <h1 className="mb-4 text-start">Qual a idade média dos colaboradores?</h1>
                     
@@ -85,7 +66,7 @@ const Cadastro = () => {
                       
 
 
-                    <button className="botaoBanner">CALCULAR CUSTO</button>
+                    <button className="botaoBanner botaoBranco">CALCULAR CUSTO</button>
                 </Col>
       </div>
 
@@ -94,7 +75,7 @@ const Cadastro = () => {
 
 
 
-        <div className="fundoInfo">
+        <div id="header" className="fundoInfo">
                <CadastroForm />     
       </div>
 

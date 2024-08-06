@@ -26,17 +26,24 @@ body {background-color: #fffcfb;}
 }
 
 .fundoCalc {
-  background-color: #73347f;
   padding: 20px 0px;
   overflow: hidden;
 }
 .textoCalc{
-    background-color: #e1a4ef;
     padding: 1.6rem !important;
-    border-radius: 5px 50px;
+    border-radius: 15px;
     color: #71357e;
     font-size: 17px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    box-shadow: #b32ef066 5px 5px, #dd2ef04d 10px 10px, #c62ef033 15px 15px, #e62ef01a 20px 20px, #a62ef00d 25px 25px, #00000033 0px 12px 28px 0px, #0000001a 0px 2px 4px 0px, #ffffff0d 0px 0px 0px 1px inset;;
+
+/* quadriculado */
+    --color: #ecd5f1;
+    padding: 20px 0px;
+    background-color: #f9f2f0;
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    background-size: 55px 55px;
+
 }
 
 .botaoBanner {
@@ -61,12 +68,13 @@ body {background-color: #fffcfb;}
   .botaoBanner:active {
     transform: translateY(-1px);
   }
+      .botaoBranco:hover {
+        box-shadow: 0px 15px 20px #cbc7cd;
+      }
 
-  
 
-  .input {
+  .inputgeral {
     width: 100%;
-    max-width: 220px;
     height: 40px;
     border-radius: 12px;
     border: 1.5px solid lightgrey;
@@ -74,14 +82,14 @@ body {background-color: #fffcfb;}
     transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
     box-shadow: 0px 0px 20px -18px;
   }
-  .input:hover {
+  .inputgeral:hover {
     border: 2px solid lightgrey;
     box-shadow: 0px 0px 20px -17px;
   }
-  .input:active {
+  .inputgeral:active {
     transform: scale(0.95);
   }
-  .input:focus {
+  .inputgeral:focus {
     border: 2px solid grey;
   }
 
