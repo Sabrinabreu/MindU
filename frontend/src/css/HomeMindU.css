@@ -1,0 +1,87 @@
+body {
+    background-color: #f8eac9 !important;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth !important;
+}
+
+
+.cardBanner {
+    animation: appear 1s ease-in-out !important;
+    position: absolute !important;
+    width: 320px !important;
+    border-radius: 140px 140px 10px 10px !important;
+    height: 500px !important;
+    right: 8% !important;
+    border-color: #704170 !important;
+    border-width: 10px !important;
+}
+
+.cardProfs {
+    position: absolute !important;
+    left: 60% !important;
+    top: 76% !important;
+    border-radius: 100% !important;
+    height: 200px !important;
+    width: 200px !important;
+    border-color: #b37ebf !important;
+    border-width: 10px !important;
+}
+
+.txtSobre {
+    position: absolute !important;
+    top: 40% !important;
+    bottom: 20% !important;
+    left: 8% !important;
+    width: 500px !important;
+    text-align: left !important;
+}
+
+.botaoSobre {
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: transparent;
+    border: 1.7px solid #252525;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.botaoSobre:hover {
+    box-shadow: 0px 15px 20px #e5cc9d;
+    transform: translateY(-7px);
+}
+
+.botaoSobre:active {
+    transform: translateY(-1px);
+}
+
+.qualidadesMindU {
+    position: absolute !important;
+    top: 140% !important;
+    left: 5% !important;
+
+    h1 {
+        display: block !important;
+        text-align: -webkit-center !important;
+    }
+
+    .cards {
+        position: absolute !important;
+    }
+
+    .text-center {
+        margin-right: 70px !important;
+    }
+}
+
+.slide {
+    margin-top: 90% !important;
+    position: relative !important;
+    color: white !important;
+}
