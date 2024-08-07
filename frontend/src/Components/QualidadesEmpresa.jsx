@@ -13,7 +13,7 @@ function QualidadesMindU() {
                     <div className='qualidadesMindU'>
                         <h1>Porque escolher a MindU?</h1>
                         <div className='d-flex cards'>
-                            <Col md='8'>
+                            <Col md='4'>
                                 <Card className="text-center">
 
                                     <Card.Body>
@@ -26,7 +26,7 @@ function QualidadesMindU() {
 
                                 </Card></Col>
 
-                            <Col md='8'>
+                            <Col md='4'>
                                 <Card className="text-center">
 
                                     <Card.Body>
@@ -38,7 +38,7 @@ function QualidadesMindU() {
                                     </Card.Body>
 
                                 </Card></Col>
-                            <Col md='8'>
+                            <Col md='4'>
                                 <Card className="text-center">
 
                                     <Card.Body>

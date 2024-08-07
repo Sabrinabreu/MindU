@@ -62,26 +62,117 @@ body {
 }
 
 .qualidadesMindU {
-    position: absolute !important;
-    top: 140% !important;
-    left: 5% !important;
-
-    h1 {
-        display: block !important;
-        text-align: -webkit-center !important;
-    }
-
-    .cards {
-        position: absolute !important;
-    }
-
-    .text-center {
-        margin-right: 70px !important;
-    }
+    margin-top: 50% !important;
+    text-align: center;
+    /* Centraliza o texto dentro da div */
+    margin: 0 auto;
+    /* Centraliza a div no container pai */
+    padding: 30px;
+    /* Ajuste o padding conforme necessário */
 }
 
+.cards {
+    display: flex !important;
+    justify-content: center !important;
+    /* Centraliza os cartões horizontalmente */
+    gap: 10px !important;
+    /* Espaço entre os cartões */
+}
+
+.card {
+    flex: 0 1 auto !important;
+    /* Ajusta os cartões para se ajustar ao espaço disponível */
+    max-width: 250px !important;
+    /* Limita a largura máxima dos cartões */
+    margin: 40px !important;
+    /* Espaço ao redor dos cartões */
+}
+
+.text-center {
+    margin-bottom: 6% !important;
+}
+
+.carousel-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
 .slide {
-    margin-top: 90% !important;
-    position: relative !important;
-    color: white !important;
+    background: #b082bb9d;
+    border-radius: 10px;
+    padding: 28px;
+    text-align: center;
+    opacity: 30%;
+    /* Slides não centrais são um pouco opacos */
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    transform: scale(0.6);
+    /* Reduz o tamanho dos slides não centrais */
+    z-index: 0;
+    /* Slides não centrais estão atrás */
+    box-shadow: 0 4px 6px #714071;
+    /* Adiciona uma sombra sutil */
+}
+
+.slick-center .slide {
+    opacity: 1;
+    /* Slide central é totalmente opaco */
+    transform: scale(1);
+    /* Slide central está no tamanho total */
+    z-index: 1;
+    /* Garante que o slide central fique acima dos outros */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    /* Adiciona uma sombra mais pronunciada */
+}
+
+.slick-slide {
+    transition: transform 0.5s ease;
+}
+
+.slick-dots {
+    bottom: -30px;
+    /* Ajuste a posição dos pontos de navegação se necessário */
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 40px !important;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-prev {
+    left: 10px !important;
+
+}
+
+.slick-next {
+    right: 20px !important;
+}
+
+.slick-prev,
+.slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 0;
+    transform: translate(0, -40%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent !important;
+    color: #704170 !important;
 }
