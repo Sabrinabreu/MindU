@@ -1,39 +1,77 @@
 body {
-    background-color: #f8eac9 !important;
+    background-color: #fde9bf !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth !important;
 }
 
 
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scroll-section {
+    opacity: 0%;
+    transform: translateY(90px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    margin: 8px;
+    flex: 1 0;
+    max-width: 100%;
+}
+
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .cardBanner {
-    animation: appear 1s ease-in-out !important;
     position: absolute !important;
-    width: 320px !important;
+    width: 500px !important;
     border-radius: 140px 140px 10px 10px !important;
     height: 500px !important;
     right: 8% !important;
     border-color: #704170 !important;
-    border-width: 10px !important;
+    border-width: 4px !important;
+    background-color: #704170 !important;
+
+}
+
+.imagem1 {
+    border-radius: 140% !important;
+    margin-top: 20% !important;
+    margin-left: 2px !important;
+}
+
+.imagem2 {
+    border-top-left-radius: 20% !important;
+    border-top-right-radius: 20% !important;
+    margin-top: 56% !important;
+    margin-left: 2px !important;
 }
 
 .cardProfs {
-    position: absolute !important;
-    left: 60% !important;
-    top: 76% !important;
+    left: 40% !important;
+    top: 145% !important;
     border-radius: 100% !important;
     height: 200px !important;
     width: 200px !important;
     border-color: #b37ebf !important;
-    border-width: 10px !important;
+    border-width: 4px !important;
+    background-color: #b37ebf !important;
+
 }
 
 .txtSobre {
     position: absolute !important;
-    top: 40% !important;
+    top: 20% !important;
     bottom: 20% !important;
-    left: 8% !important;
-    width: 500px !important;
+    left: 6% !important;
+    width: 600px !important;
     text-align: left !important;
+    padding: 1.3em 3em;
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 
 .botaoSobre {
@@ -43,7 +81,7 @@ body {
     letter-spacing: 2.5px;
     font-weight: 500;
     color: #000;
-    background-color: transparent;
+    background-color: #b37ebf36;
     border: 1.7px solid #252525;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -62,12 +100,12 @@ body {
 }
 
 .qualidadesMindU {
-    margin-top: 50% !important;
+    margin-top: 30% !important;
     text-align: center;
     /* Centraliza o texto dentro da div */
     margin: 0 auto;
     /* Centraliza a div no container pai */
-    padding: 30px;
+    padding: 110px !important;
     /* Ajuste o padding conforme necessário */
 }
 
@@ -75,21 +113,73 @@ body {
     display: flex !important;
     justify-content: center !important;
     /* Centraliza os cartões horizontalmente */
-    gap: 10px !important;
+    gap: 28px !important;
     /* Espaço entre os cartões */
+
 }
 
 .card {
-    flex: 0 1 auto !important;
+    flex: auto !important;
     /* Ajusta os cartões para se ajustar ao espaço disponível */
-    max-width: 250px !important;
+    max-width: 300px !important;
     /* Limita a largura máxima dos cartões */
-    margin: 40px !important;
+    margin: 20px !important;
     /* Espaço ao redor dos cartões */
 }
 
 .text-center {
-    margin-bottom: 6% !important;
+    padding: 1.3em 3em;
+    font-size: 28px;
+    letter-spacing: 2.5px;
+}
+
+.cardQualidades {
+    padding: 1em 3em;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: #000;
+    background-color: #b37ebf36;
+    border: 2px solid #704170;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+    outline: none;
+    width: 250px !important;
+    height: 300px !important;
+}
+
+
+.cardQualidades:hover {
+    box-shadow: 0px 15px 20px #e5cc9d;
+    transform: translateY(-10px);
+}
+
+.cardQualidades:active {
+    transform: translateY(-4px);
+}
+
+.calendarimg {
+    margin-bottom: 10% !important;
+}
+
+.transformationimg {
+    margin-bottom: 10% !important;
+    width: 80px !important;
+}
+
+.diplomaimg {
+    margin-bottom: 10% !important;
+}
+
+.titlecardQualidades {
+    font-size: 18px !important;
+}
+
+.titlecardQualidadesBig {
+    font-size: 16px !important;
+    font-weight: 600;
 }
 
 .carousel-container {
@@ -100,34 +190,41 @@ body {
 
 
 .slide {
-    background: #b082bb9d;
+    background: #ffffff !important;
+    border-color: #704170 !important;
+    border-width: 20% !important;
     border-radius: 10px;
     padding: 28px;
     text-align: center;
     opacity: 30%;
     /* Slides não centrais são um pouco opacos */
-    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-    transform: scale(0.6);
+    transition: opacity 0.2s ease, transform 0.8s ease, box-shadow 0.2s ease;
+    transform: scale(0.5);
     /* Reduz o tamanho dos slides não centrais */
     z-index: 0;
     /* Slides não centrais estão atrás */
     box-shadow: 0 4px 6px #714071;
     /* Adiciona uma sombra sutil */
+    padding: 1em 3em;
+    font-size: 12px;
+    letter-spacing: 1px;
+    height: 400px !important;
+    width: 400px !important;
 }
 
 .slick-center .slide {
     opacity: 1;
     /* Slide central é totalmente opaco */
-    transform: scale(1);
+    transform: scale(0.9);
     /* Slide central está no tamanho total */
     z-index: 1;
     /* Garante que o slide central fique acima dos outros */
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
     /* Adiciona uma sombra mais pronunciada */
 }
 
 .slick-slide {
-    transition: transform 0.5s ease;
+    transition: transform 2s ease !important;
 }
 
 .slick-dots {
@@ -174,5 +271,4 @@ body {
     border: none;
     outline: none;
     background: transparent !important;
-    color: #704170 !important;
 }

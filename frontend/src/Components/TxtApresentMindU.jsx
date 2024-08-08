@@ -9,10 +9,17 @@ function TxtSobreMindU() {
         <Container>
             <Row >
                 <Col md="10">
+
                     <div className='txtSobre'>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <h1> Quem somos nós: </h1>
                         <br />
-                        <button className='botaoSobre'>Investir no bem estar </button>
+                        <p> Bem-vindo a MindU! Somos um convênio que oferece serviços de psicologia para empresas e seus colaboradores, com foco em promover o bem-estar e a saúde mental. <br />
+
+                            Para as empresas, fornecemos programas de bem-estar e consultoria para ambientes de trabalho saudáveis. Para os funcionários, oferecemos terapia híbrida (presencial e online) e workshops sobre manejo de estresse e desenvolvimento pessoal.
+
+                            <br /> Nosso objetivo é apoiar a saúde mental dos colaboradores e melhorar o ambiente de trabalho. Conheça nossos planos e garanta uma boa saúde mental para você!!</p>
+                        <br />
+                        <button className='botaoSobre'>Veja os nossos planos aqui. </button>
                     </div>
                 </Col>
             </Row>
