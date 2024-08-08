@@ -13,7 +13,7 @@ function Home() {
       const sections = document.querySelectorAll('.scroll-section');
       sections.forEach(section => {
         const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom >= 0) {
+        if (rect.top < window.innerHeight && rect.bottom >= -1) {
           section.classList.add('visible');
         } else {
           section.classList.remove('visible');
@@ -37,7 +37,7 @@ function Home() {
           <CardSobreMindU />
         </div>
       </div>
-      <div className="scroll-section">
+      <div className="scroll-section right">
         <QualidadesMindU />
       </div>
       <div className="scroll-section">

@@ -1,5 +1,5 @@
 body {
-    background-color: #fde9bf !important;
+    background-color: #f5e8cd !important;
     overflow-x: hidden !important;
     scroll-behavior: smooth !important;
 }
@@ -11,19 +11,36 @@ body {
 }
 
 .scroll-section {
-    opacity: 0%;
-    transform: translateY(90px);
-    transition: opacity 2s ease-out, transform 2s ease-out;
-    margin: 8px;
-    flex: 1 0;
+    top: 10% !important;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    margin: 4px;
+    flex: 1 0 40% !important;
     max-width: 100%;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 2s forwards;
 }
 
+.right {
+    opacity: 0;
+    transform: translateX(90%);
+    animation: slideIn 2s forwards;
+    transition: opacity 1s ease-out 0.8s, transform 1s ease-out 0.8s;
+
+}
 
 .visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) !important;
 }
+
+.right.visible {
+    opacity: 1;
+    transform: translateX(0);
+    Transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
 
 .cardBanner {
     position: absolute !important;
@@ -105,7 +122,7 @@ body {
     /* Centraliza o texto dentro da div */
     margin: 0 auto;
     /* Centraliza a div no container pai */
-    padding: 110px !important;
+    padding: 160px !important;
     /* Ajuste o padding conforme necessário */
 }
 
@@ -139,7 +156,7 @@ body {
     letter-spacing: 1px;
     font-weight: 500;
     color: #000;
-    background-color: #b37ebf36;
+    background-color: #b37ebf77;
     border: 2px solid #704170;
     border-radius: 20px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);

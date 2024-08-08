@@ -9,8 +9,8 @@ import Transformação from '../img/icons8-butterfly-100.png'
 import { GiDiploma } from "react-icons/gi";
 import { LockKeyhole } from 'lucide-react';
 
-
 function QualidadesMindU() {
+
     return (
         <Container>
             <Row >
