@@ -1,28 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const TabelaFuncionarios = () => {
-  const [contasFuncionarios, setcontasFuncionarios] = useState([]);
+const TabelaFuncionarios = ({ contasFuncionarios }) => {
+  const [contas, setContas] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data } = await axios.get("http://localhost:3001/contaPrvsFuncionarios");
-        setcontasFuncionarios(data);
+        setContas(data);
       } catch (error) {
-        console.error("Erro ao buscar usuários:", error); // Adiciona este log de erro
+        console.error("Erro ao buscar usuários:", error);
       }
     };
 
     fetchData();
   }, []);
 
+  useEffect(() => {
+    if (contasFuncionarios.length > 0) {
+      setContas(prevContas => [...prevContas, ...contasFuncionarios]);
+    }
+  }, [contasFuncionarios]);
+
   const handleExcluirUsuario = async (login) => {
     try {
       await axios.delete(`http://localhost:3001/contaPrvsFuncionarios/${login}`);
-      // Atualiza a lista de contas de Funcionarios após a exclusão
-      const { data } = await axios.get("http://localhost:3001/contaPrvsFuncionarios");
-      setcontasFuncionarios(data);
+      setContas(prevContas =>
+        prevContas.filter(conta => conta.login !== login)
+      );
       console.log("Usuário excluído com sucesso!");
     } catch (error) {
       console.error("Erro ao excluir usuário:", error);
@@ -34,14 +40,13 @@ const TabelaFuncionarios = () => {
       <table border={2} cellPadding={5} cellSpacing={5}>
         <thead>
           <tr>
-            <th>ID</th>
+            <th>Login</th>
             <th>Senha</th>
             <th>Ação</th>
-            {/* Adicione mais colunas, se necessário */}
           </tr>
         </thead>
         <tbody>
-          {contasFuncionarios.map((contaFuncionario) => (
+          {contas.map((contaFuncionario) => (
             <tr key={contaFuncionario.login}>
               <td>{contaFuncionario.login}</td>
               <td>{contaFuncionario.senha}</td>
@@ -53,7 +58,6 @@ const TabelaFuncionarios = () => {
                   Excluir
                 </button>
               </td>
-              {/* Renderizar outras colunas, se necessário */}
             </tr>
           ))}
         </tbody>
